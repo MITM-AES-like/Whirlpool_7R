@@ -1,0 +1,133 @@
+2^32
+Precompute neutral bytes for forward takes 2.9655 (mins)
+
+tid 0: Find match at partial target.
+Find match on 36 bits.
+Complexity (Total Forward ) is 2^32
+Complexity (Total Backward) is 2^27.9093
+Complexity (After Matched ) is 2^27.9092
+Complexity (Total) is 2^31.234
+Find match on 36 bits takes 29.3653 (mins)
+
+==== Backward computation ====
+#SB3 = 
+4c  a3  00  02  
+cc  c0  e1  be  
+24  e4  5d  87  
+2d  35  46  59  
+
+k2 = 
+70  6c  f6  28  
+32  ba  70  54  
+fd  d9  89  ba  
+89  67  79  6c  
+
+#SB2 = 
+95  9e  08  25  
+93  7e  30  2f  
+e3  71  62  b9  
+41  9a  97  27  
+
+k1 = 
+05  6d  2b  20  
+09  17  54  cf  
+99  5d  cf  15  
+fa  24  b0  3d  
+
+#SB1 = 
+b1  07  a7  fe  
+72  81  7a  36  
+50  c6  1b  a3  
+de  31  c4  47  
+
+k0 = 
+d8  f6  df  1c  
+ef  eb  fd  b9  
+06  c9  32  ca  
+d8  4a  5d  88  
+
+#SB0 = 
+ad  ef  33  3c  
+cf  db  a1  db  
+81  53  69  ae  
+f5  5b  16  2c  
+
+km = 
+d5  a1  e3  c5  
+36  43  cb  c9  
+d3  29  9b  95  
+f9  b0  e0  ae  
+
+k6 = 
+a8  cc  74  ea  
+94  87  a4  3c  
+84  0a  c4  61  
+5d  25  6b  a8  
+
+#SB0 ⊕ km ⊕ k6 = 
+d0  82  a4  13  
+6d  1f  ce  2e  
+d6  70  36  5a  
+51  ce  9d  2a  
+
+==== Forward computation ====
+#SB3 = 
+4c  a3  00  02  
+cc  c0  e1  be  
+24  e4  5d  87  
+2d  35  46  59  
+
+k3 = 
+52  00  00  00  
+00  52  00  00  
+00  00  52  00  
+00  00  00  5d  
+
+#SB4 = 
+52  c8  8f  00  
+59  52  e8  00  
+4d  af  52  00  
+00  5a  0a  52  
+
+k4 = 
+4c  63  34  a1  
+4c  63  9d  b4  
+d4  63  28  83  
+98  63  4d  7e  
+
+#SB5 = 
+4c  1e  2a  3f  
+4c  60  a8  b6  
+d4  73  3c  70  
+98  7e  3f  a7  
+
+k5 = 
+83  a5  d5  e2  
+6b  2e  70  a2  
+b4  ac  e3  bf  
+49  28  9f  4c  
+
+#SB6 = 
+0d  0b  6d  89  
+83  76  22  7a  
+64  74  d6  79  
+b1  a1  50  9f  
+
+#AK6 = 
+d0  86  7c  bb  
+7d  1f  64  9a  
+6e  8c  36  81  
+01  d3  b9  2a  
+
+#AK6 ⊕ #SB0 ⊕ km ⊕ k6 = 
+00  04  d8  a8  
+10  00  aa  b4  
+b8  fc  00  db  
+50  1d  24  00  
+
+Target = 
+00  00  00  00  
+00  00  00  00  
+00  00  00  00  
+00  00  00  00  
+
