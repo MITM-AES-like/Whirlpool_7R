@@ -10,7 +10,7 @@ small version of Whirlpool compression function (round constants are from full W
 
 * To verify the computational complexity of the attack, we count the number of calls of the forward computations, backward computations, and full computations of 7-round hashing. They are denoted with prefix `complexity_F`, `complexity_B`, and `complexity_M` in the program. The total complexity is computed as `(complexity_F + complexity_B)/2 + complexity_M`.
 
-* To make the verification feasible in limited time, we find matches on `PARTIAL` bits instead of 128 bits. In the program, one can set `PARTIAL` = `36`, `40`, `44`, `48`... The concrete patterns of the partial matches are defined using `PARTIAL_MATCH_TARGET_MASK` in [defines.h] (we give priority to the **first diagonal** and the **first column** of the state).
+* To make the verification feasible in limited time, we find matches on `PARTIAL` bits instead of 128 bits. In the program, one can set `PARTIAL` = `36`, `40`, `44`, `48`... The concrete patterns of the partial matches are defined using `PARTIAL_MATCH_TARGET_MASK` in [defines.h](https://github.com/MITM-AES-like/Whirlpool_7R/blob/master/defines.h) (we give priority to the **first diagonal** and the **first column** of the state).
 
 
 ## On precomputation:
@@ -31,15 +31,18 @@ Together with memory used in the attack, each thread can use up to 256 GB.
 ## On the results:
 
 * The attacks were verified on a server with 64 cores (use only 1 core for 36~44 bits matching and 4 cores for 48 bits matching) and 1TB memory. 
-  * To find a match on 36 bits, it took 29.3653 mins (see [F36.log]);
-  * To find a match on 40 bits, it took 32.7435 mins (see [F40.log]);
-  * To find a match on 44 bits, it took 518.294 mins (see [F44.log]);
-  * To find a match on 48 bits, it took 4979.08 mins (see [F48.log]).
+  * To find a match on 36 bits, it took 29.3653 mins (see [F36.log](https://github.com/MITM-AES-like/Whirlpool_7R/blob/master/F36.log));
+  * To find a match on 40 bits, it took 32.7435 mins (see [F40.log](https://github.com/MITM-AES-like/Whirlpool_7R/blob/master/F40.log));
+  * To find a match on 44 bits, it took 518.294 mins (see [F44.log](https://github.com/MITM-AES-like/Whirlpool_7R/blob/master/F44.log));
+  * To find a match on 48 bits, it took 4979.08 mins (see [F48.log](https://github.com/MITM-AES-like/Whirlpool_7R/blob/master/F48.log)).
   
   It used 4 OpenMP threads in parallel for matching on 48 bits. 
   The computational complexity is the **sum** of that counted by each thread, 
   and the time is the **combined CPU time of all threads** as returned by clock().
 
+## Remark
+
+This repository is in the same form with that in https://github.com/MITM-AES-like-Hashing/Whirlpool_7R. The old repository will not be maintained.
 
 ## References
 
